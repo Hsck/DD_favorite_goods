@@ -27,7 +27,6 @@ def login():
         使用selenium打开登陆界面，在程序休眠的时间内手动填写账号密码登陆或是扫码登陆，
         登陆后程序会获取cookies信息并保存
     """
-
     try:
         login_url = 'https://login.dangdang.com/signin.aspx?returnurl=http%3A//www.dangdang.com/'
         chrome.get(login_url)
@@ -60,7 +59,6 @@ def parse_page(text):
         当字典data的键'errorCode'的值为404时，即信息为空时，
         调用write_to_csv()函数将信息写入csv文件，最后结束程序
     """
-
     try:
         # 解码json数据
         data = json.loads(text)
